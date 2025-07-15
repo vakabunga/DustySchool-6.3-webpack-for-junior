@@ -1,0 +1,13 @@
+.username {
+  font-weight: 700;
+}
+
+.avatar {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 100px;
+
+  border-radius: 50px;
+}

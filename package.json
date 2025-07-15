@@ -1,0 +1,41 @@
+{
+  "name": "dustyschool-6.3-webpack-for-junior",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && cp -Ra ./src/. dist && babel src -d dist",
+    "lint": "eslint ./src && stylelint './src/**/*.css'",
+    "lint:fix": "eslint ./src --fix && stylelint './src/**/*.css' --fix",
+    "start": "http-server ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vakabunga/DustySchool-6.3-webpack-for-junior.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/vakabunga/DustySchool-6.3-webpack-for-junior/issues"
+  },
+  "homepage": "https://github.com/vakabunga/DustySchool-6.3-webpack-for-junior#readme",
+  "devDependencies": {
+    "@babel/cli": "7.28.0",
+    "@babel/core": "7.28.0",
+    "@babel/preset-env": "7.28.0",
+    "@shopify/stylelint-plugin": "15.0.2",
+    "eslint": "8.57.1",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.32.0",
+    "http-server": "14.1.1",
+    "stylelint": "16.21.1",
+    "stylelint-order": "7.0.0",
+    "stylelint-semantic-groups": "1.2.1"
+  },
+  "dependencies": {
+    "mini.css": "3.0.1"
+  }
+}
