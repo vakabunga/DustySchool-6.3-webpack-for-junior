@@ -10,6 +10,10 @@
   },
   "rules": {
     "no-unused-vars": "off",
-    "no-undef": "off"
+    "no-undef": "off",
+    "no-tabs": "off",
+    "indent": ["error", "tab"],
+    "object-curly-newline": "off",
+    "import/no-extraneous-dependencies": "off"
   }
 }
