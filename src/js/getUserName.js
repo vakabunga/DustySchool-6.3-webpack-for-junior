@@ -1,18 +1,20 @@
-function getUserName() {
-  if (userName !== null) {
-    return Promise.resolve(userName);
-  }
+import { form, input, avatar, userName } from '../index';
 
-  return new Promise((resolve, reject) => {
-    avatar.classList.add('hidden');
-    form.classList.remove('hidden');
+export default function getUserName() {
+	if (userName !== null) {
+		return Promise.resolve(userName);
+	}
 
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      localStorage.setItem('userName', input.value);
-      avatar.classList.remove('hidden');
+	return new Promise((resolve, reject) => {
+		avatar.classList.add('hidden');
+		form.classList.remove('hidden');
 
-      resolve(localStorage.getItem('userName'));
-    });
-  });
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+			localStorage.setItem('userName', input.value);
+			avatar.classList.remove('hidden');
+
+			resolve(localStorage.getItem('userName'));
+		});
+	});
 }
